@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import getConfig from "../../utils/getConfig";
-import { getCart } from "./cart.Slice";
+import { getCart, getCartThunk } from "./cart.Slice";
 import { setIsLoading } from "./isLoading.slice";
 
 export const purchasesSlice = createSlice({
@@ -28,10 +28,11 @@ export const getPurchasesThunk = () => (dispatch) => {
 
 export const addFavoriteThunk = (favorite) => (dispatch)=> {
   dispatch(setIsLoading(true));
+  console.log("Me ejecute")
   return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/cart', favorite,
   getConfig()
   )
-  .then(()=> dispatch(getPurchasesThunk()))
+  .then(()=> dispatch(getCartThunk()))
   .finally(()=> dispatch(setIsLoading(false)))
 }
 
