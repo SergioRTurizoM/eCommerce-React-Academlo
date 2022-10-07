@@ -1,0 +1,4 @@
+.cardCartContainer{
+    display: flex;
+    justify-content: space-between;
+}
