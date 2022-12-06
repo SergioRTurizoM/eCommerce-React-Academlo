@@ -18,7 +18,7 @@ export const newSlice = createSlice({
 export const getNewsThunk = () => (dispatch) => {
     dispatch(setIsLoading(true));
     axios
-      .get("https://ecommerce-api-react.herokuapp.com/api/v1/products/")
+      .get("https://e-commerce-api.academlo.tech/api/v1/products/")
       .then((res) => dispatch(setNews(res.data)))
       .catch(error=>console.log(error))
       .finally(() => dispatch(setIsLoading(false)));

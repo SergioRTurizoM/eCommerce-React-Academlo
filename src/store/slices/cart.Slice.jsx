@@ -18,14 +18,14 @@ export const cartSlice = createSlice({
 export const getCartThunk = () => (dispatch) => {
   dispatch(setIsLoading(true));
   return axios
-    .get("https://ecommerce-api-react.herokuapp.com/api/v1/cart", getConfig())
+    .get("https://e-commerce-api.academlo.tech/api/v1/cart", getConfig())
     .then((res) => dispatch(getCart(res.data)))
     .finally(() => dispatch(setIsLoading(false)));
 };
 
 export const deleteProductThunk =(id)=>(dispatch)=>{
   dispatch(setIsLoading(true));
-  axios.delete(`https://ecommerce-api-react.herokuapp.com/api/v1/cart/${id}`, getConfig())
+  axios.delete(`https://e-commerce-api.academlo.tech/api/v1/cart/${id}`, getConfig())
   .then(()=> dispatch(getCartThunk()))
   .catch((error) =>
     console.log("Hubo un error con la eliminación del producto")

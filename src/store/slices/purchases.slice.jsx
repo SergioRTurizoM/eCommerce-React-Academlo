@@ -18,7 +18,7 @@ export const getPurchasesThunk = () => (dispatch) => {
   dispatch(setIsLoading(true));
   return axios
     .get(
-      "https://ecommerce-api-react.herokuapp.com/api/v1/purchases",
+      "https://e-commerce-api.academlo.tech/api/v1/purchases",
       getConfig()
     )
     .then((res) => dispatch(setPurchases(res.data)))
@@ -29,7 +29,7 @@ export const getPurchasesThunk = () => (dispatch) => {
 export const addFavoriteThunk = (favorite) => (dispatch)=> {
   dispatch(setIsLoading(true));
   console.log("Me ejecute")
-  return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/cart', favorite,
+  return axios.post('https://e-commerce-api.academlo.tech/api/v1/cart', favorite,
   getConfig()
   )
   .then(()=> dispatch(getCartThunk()))
@@ -38,7 +38,7 @@ export const addFavoriteThunk = (favorite) => (dispatch)=> {
 
 export const checkoutButtonThunk = ()=>(dispatch)=>{
   dispatch(setIsLoading(true));
-  return axios.post('https://ecommerce-api-react.herokuapp.com/api/v1/purchases',{}, getConfig())
+  return axios.post('https://e-commerce-api.academlo.tech/api/v1/purchases',{}, getConfig())
   .then(()=>dispatch(getCart([])))
   .finally(()=> dispatch(setIsLoading(false)))
 }
