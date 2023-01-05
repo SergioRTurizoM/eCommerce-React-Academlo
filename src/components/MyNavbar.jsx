@@ -38,6 +38,9 @@ const MyNavbar = () => {
                 <Nav.Link as={Link} to="/">
                   Home
                 </Nav.Link>
+                <Nav.Link as={Link} to="/" className="vendoo-call-to-action-5---purple-light">
+                  Register
+                </Nav.Link>
                 <Nav.Link as={Link} to="/login">
                   Login
                 </Nav.Link>
