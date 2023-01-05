@@ -38,6 +38,24 @@ const MyNavbar = () => {
                 <Nav.Link as={Link} to="/">
                   Home
                 </Nav.Link>
+                <Nav.Link as={Link} to="/" id="header-cta-pricing">
+                  Geet started with vendoo
+                </Nav.Link>
+                <Nav.Link as={Link} to="/" id="footer-cta-pricing">
+                  Geet started with vendoo
+                </Nav.Link>
+                <Nav.Link as={Link} to="/" id="body-google-play">
+                  Google Play body
+                </Nav.Link>
+                <Nav.Link as={Link} to="/" id="body-AppStore">
+                  App Store body
+                </Nav.Link>
+                <Nav.Link as={Link} to="/" id="footer-google-play">
+                  Google Play footer
+                </Nav.Link>
+                <Nav.Link as={Link} to="/" id="footer-appStore">
+                  App Store footer
+                </Nav.Link>
                 <Nav.Link as={Link} to="/" className="vendoo-call-to-action-5---purple-light" id="btn-register">
                   Register
                 </Nav.Link>
