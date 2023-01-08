@@ -1,0 +1,68 @@
+.all-vendoo-plans-include-content{
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 #d4caec;
+    padding-left: 0px;
+    -webkit-box-align: center;
+    align-items: center;
+
+}
+
+h2{
+    color: rgb(55, 48, 105);
+}
+.columns-43{
+    display: flex;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 55px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.w-row{
+    content: " ";
+    display: table;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-column-end: 2;
+    grid-row-end: 2;
+}
+
+
+.features-style{
+    display: flex;
+}
+
+.column-86 {
+    padding-top: 25px;
+    padding-right: 38px;
+    padding-bottom: 25px;
+}
+
+.column-87{
+    padding: 25px 0px 25px 50px;
+}
+
+.w-col{
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+}
+
+.w-col-6{
+    
+    width: 50%;
+}
+
+.t2{
+
+    color: #141a21;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: left;
+}

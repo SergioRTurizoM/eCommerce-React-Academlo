@@ -12,6 +12,7 @@ import Col from "react-bootstrap/Col";
 import { useDispatch } from "react-redux";
 import { setIsLoading } from "../store/slices/isLoading.slice";
 import Carrusel from "../components/Carrusel";
+import AllPlansInclude from "../components/AllPlansInclude";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -63,6 +64,8 @@ const Home = () => {
 
   return (
     <div>
+      <AllPlansInclude/>
+      <br/>
       <Carrusel />
       <div className="categoriesContainer">
         {categories?.map((category) => (
